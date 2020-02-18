@@ -2,6 +2,8 @@ import unittest
 
 
 def local_peak(numbers):
+    if not numbers:
+        return None
     if len(numbers) == 1:
         return numbers[0]
     if numbers[0] >= numbers[1]:
@@ -11,6 +13,9 @@ def local_peak(numbers):
 
 
 class TestLocalPeakFinder(unittest.TestCase):
+    def test_there_is_no_local_peak_when_there_is_no_element(self):
+        self.assertEqual(None, local_peak([]))
+
     def test_local_peak_of_single_element_is_itself(self):
         self.assertEqual(0, local_peak([0]))
         self.assertEqual(1, local_peak([1]))
