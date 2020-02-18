@@ -2,6 +2,8 @@ import unittest
 
 
 def local_peak(numbers):
+    if len(numbers) == 1:
+        return numbers[0]
     if len(numbers) == 2:
         if numbers[0] >= numbers[1]:
             return numbers[0]
