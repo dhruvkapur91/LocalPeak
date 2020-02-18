@@ -14,7 +14,6 @@ def local_peak(numbers):
             return numbers[0]
         else:
             return local_peak(numbers[1:])
-    return numbers[0]
 
 
 class TestLocalPeakFinder(unittest.TestCase):
