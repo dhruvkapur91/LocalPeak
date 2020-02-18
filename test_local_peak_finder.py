@@ -4,16 +4,10 @@ import unittest
 def local_peak(numbers):
     if len(numbers) == 1:
         return numbers[0]
-    if len(numbers) == 2:
-        if numbers[0] >= numbers[1]:
-            return numbers[0]
-        else:
-            return local_peak(numbers[1:])
-    if len(numbers) == 3:
-        if numbers[0] >= numbers[1]:
-            return numbers[0]
-        else:
-            return local_peak(numbers[1:])
+    if numbers[0] >= numbers[1]:
+        return numbers[0]
+    else:
+        return local_peak(numbers[1:])
 
 
 class TestLocalPeakFinder(unittest.TestCase):
