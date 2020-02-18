@@ -3,7 +3,10 @@ import unittest
 
 def local_peak(numbers):
     if len(numbers) == 2:
-        return max(numbers[0], numbers[1])
+        if numbers[0] >= numbers[1]:
+            return numbers[0]
+        else:
+            return numbers[1]
     if len(numbers) == 3:
         if numbers[0] >= numbers[1]:
             return numbers[0]
