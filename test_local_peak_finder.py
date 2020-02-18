@@ -29,3 +29,7 @@ class TestLocalPeakFinder(unittest.TestCase):
         self.assertEqual(2, local_peak([0, 1, 2]))
         self.assertEqual(2, local_peak([2, 1, 0]))
         self.assertEqual(2, local_peak([1, 2, 0]))
+
+    def test_peak_finder_finds_the_first_peak(self):
+        data_with_2_peaks = [1, 0, 2]
+        self.assertEqual(1, local_peak(data_with_2_peaks))
