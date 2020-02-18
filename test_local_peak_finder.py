@@ -28,3 +28,4 @@ class TestLocalPeakFinder(unittest.TestCase):
     def test_local_peak_of_three_elements_is_the_greatest_one_of_the_three(self):
         self.assertEqual(2, local_peak([0, 1, 2]))
         self.assertEqual(2, local_peak([2, 1, 0]))
+        self.assertEqual(2, local_peak([1, 2, 0]))
